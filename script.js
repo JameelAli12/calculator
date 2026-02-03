@@ -6,7 +6,13 @@ const zero = document.querySelector(".zero")
 const deleted = document.querySelector(".delete")
 const lbracket = document.querySelector(".leftbracket")
 const rbracket = document.querySelector(".rightbracket")
-
+const subtract = document.querySelector(".subtract")
+const multiply = document.querySelector(".multiply")
+const divide = document.querySelector(".divide")
+const exponent = document.querySelector(".exponent")
+const sqrt = document.querySelector(".sqrt")
+const add = document.querySelector(".add")
+const remainder = document.querySelector(".remainder")
 
 numbers.forEach(number => number.addEventListener("click", function() {
     screen.textContent += this.textContent;
