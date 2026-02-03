@@ -87,3 +87,26 @@ h1 {
     height: 120px; 
 }
 
+.leftbracket {
+    position: relative;
+    bottom: 180px;
+    left: 98px;
+}
+.rightbracket {
+    position: relative;
+    bottom: 180px;
+    left: 90px;
+}
+
+.result {
+    position: relative;
+    bottom: 120px;
+    right: 38px
+}
+
+.add {
+    position: relative;
+    bottom: 240px;
+    left: 120px;
+}
+
