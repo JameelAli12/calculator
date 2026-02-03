@@ -28,7 +28,7 @@ h1 {
 }
 
 .add {
-    height: 120px;
+    height: 120px !important; 
     width: 60px
 }
 
