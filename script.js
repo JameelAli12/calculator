@@ -6,13 +6,8 @@ const zero = document.querySelector(".zero")
 const deleted = document.querySelector(".delete")
 const lbracket = document.querySelector(".leftbracket")
 const rbracket = document.querySelector(".rightbracket")
-const subtract = document.querySelector(".subtract")
-const multiply = document.querySelector(".multiply")
-const divide = document.querySelector(".divide")
-const exponent = document.querySelector(".exponent")
-const sqrt = document.querySelector(".sqrt")
-const add = document.querySelector(".add")
-const remainder = document.querySelector(".remainder")
+const operators = document.querySelectorAll(".op")
+const result = document.querySelector(".result")
 
 numbers.forEach(number => number.addEventListener("click", function() {
     screen.textContent += this.textContent;
@@ -43,6 +38,31 @@ deleted.addEventListener("click", () => {
     screen.textContent = query.slice(0,query.length-1)
 })
 
+function addition(...nums) {
+    let total = 0;
+    for(let num of nums) {
+        total += num
+    }
+    return total;
+}
+
+operators.forEach(operator => operator.addEventListener("click", function() {
+    screen.textContent += this.textContent;
+}))
+
+
+
+result.addEventListener("click",() => {
+    const total = 0;
+    const first = screen.textContent[0];
+    const operator = screen.textContent[1];
+    const second = screen.textContent[2];
+    console.log(screen.textContent)
+    if(operator === '+') {
+        total += first + second;
+    }
+    return total
+})
 
 
 
