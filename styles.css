@@ -27,11 +27,6 @@ h1 {
     flex-wrap: wrap;
 }
 
-.add {
-    height: 120px !important; 
-    width: 60px
-}
-
 .clear, .result {
     width: 120px;
     height: 60px;
@@ -102,7 +97,7 @@ h1 {
     position: relative;
     bottom: 120px;
     right: 38px;
-    color: green;
+    color: rgb(2, 82, 255);
 }
 
 .add {
@@ -112,12 +107,18 @@ h1 {
 }
 
 button:hover {
-    background-color: green;
-    color: yellow;
+    background-color: rgb(234, 240, 234);
+    border: 2px solid black;
 }
 
 .clear {
     color: red;
 }
 
+.delete {
+    position: relative;
+    bottom: 60px;
+    left: 240px;
+    size: 1000px;
+}
 
