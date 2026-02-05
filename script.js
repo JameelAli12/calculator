@@ -9,6 +9,14 @@ const rbracket = document.querySelector(".rightbracket")
 const operators = document.querySelectorAll(".op")
 const result = document.querySelector(".result")
 
+const addition = document.querySelector(".add")
+const subtraction = document.querySelector(".subtract")
+const multiplication = document.querySelector(".multiply")
+const division = document.querySelector(".divide")
+const exponention = document.querySelector(".exponent")
+const remainder = document.querySelector(".remainder")
+const sqrt = document.querySelector(".sqrt")
+
 numbers.forEach(number => number.addEventListener("click", function() {
     screen.textContent += this.textContent;
 }))
@@ -42,6 +50,16 @@ operators.forEach(operator => operator.addEventListener("click", function() {
     screen.textContent += this.textContent;
 }))
 
-
-
-
+result.addEventListener("click", () => {
+    let result = 0;
+    const query = screen.textContent;
+    query.split('').forEach(n => {
+        if(query[n] === 'x') {
+            result += Number(query[n-1]) * Number(query[n+1])
+        }
+        else if(query[n] === '+') {
+            result += Number(query[n-1]) + Number(query[n+1])
+        }
+    })
+    screen.textContent = result;
+})
