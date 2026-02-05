@@ -51,15 +51,22 @@ operators.forEach(operator => operator.addEventListener("click", function() {
 }))
 
 result.addEventListener("click", () => {
-    let result = 0;
-    const query = screen.textContent;
-    query.split('').forEach(n => {
-        if(query[n] === 'x') {
-            result += Number(query[n-1]) * Number(query[n+1])
+    const numbers = [];
+    const operators = [];
+    for(let i=0; i<screen.textContent.length; i++) {
+        if(screen.textContent[i] === '+' ||
+            screen.textContent[i] === '-' ||
+            screen.textContent[i] === 'x' ||
+            screen.textContent[i] === '/' ||
+            screen.textContent[i] === '%' ||
+            screen.textContent[i] === '^' ||
+            screen.textContent[i] === '√') 
+            {
+            operators.push(screen.textContent[i])
         }
-        else if(query[n] === '+') {
-            result += Number(query[n-1]) + Number(query[n+1])
+        else {
+            numbers.push(Number(screen.textContent[i]))
         }
-    })
-    screen.textContent = result;
+    }
+    console.log(numbers, operators)
 })
