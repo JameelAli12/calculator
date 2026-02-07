@@ -1,13 +1,48 @@
-// const numbers = document.querySelectorAll("#numbers button")
-// const screen = document.getElementById("screen")
-// const dot = document.querySelector(".dot")
 const clear = document.querySelector(".clear")
-// const zero = document.querySelector(".zero")
 const deleted = document.querySelector(".delete")
+const result = document.querySelector(".result")
+const screen = document.getElementById("screen")
+
+clear.addEventListener("click", () => {
+    screen.textContent = ''
+})
+
+deleted.addEventListener("click", () => {
+    const query = screen.textContent;
+    screen.textContent = query.slice(0,query.length-1)
+})
+
+const handleDisplay = input => {
+    screen.textContent += input;
+}
+
+result.addEventListener("click", () => {
+    const query = screen.textContent;
+    try {
+        screen.textContent = eval(query);
+    }
+    catch(error) {
+        screen.textContent = 'Err'
+    }
+})
+
+
+
+
+
+
+
+
+
+
+// const zero = document.querySelector(".zero")
+// const numbers = document.querySelectorAll("#numbers button")
+// const dot = document.querySelector(".dot")
+
 // const lbracket = document.querySelector(".leftbracket")
 // const rbracket = document.querySelector(".rightbracket")
 // const operators = document.querySelectorAll(".op")
-const result = document.querySelector(".result")
+
 
 // const addition = document.querySelector(".add")
 // const subtraction = document.querySelector(".subtract")
@@ -37,15 +72,6 @@ const result = document.querySelector(".result")
 // rbracket.addEventListener("click", function() {
 //     screen.textContent += this.textContent;   
 // })
-
-clear.addEventListener("click", () => {
-    screen.textContent = ''
-})
-
-deleted.addEventListener("click", () => {
-    const query = screen.textContent;
-    screen.textContent = query.slice(0,query.length-1)
-})
 
 // operators.forEach(operator => operator.addEventListener("click", function() {
 //     screen.textContent += this.textContent;
