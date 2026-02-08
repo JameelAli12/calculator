@@ -96,7 +96,7 @@ h1 {
 .result {
     position: relative;
     bottom: 120px;
-    right: 38px;
+    right: 37px;
     color: rgb(2, 82, 255);
 }
 
@@ -122,3 +122,6 @@ button:hover {
     size: 1000px;
 }
 
+#prev, #curr {
+    text-align: right;
+}
