@@ -53,6 +53,7 @@ h1 {
     font-size: 25px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    width: 310px
 }
 
 #calculator {
@@ -124,4 +125,16 @@ button:hover {
 
 #prev, #curr {
     text-align: right;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+#prev {
+    font-size: 20px;
+    color: rgb(5, 255, 5);
+}
+
+#curr {
+    font-size: 30px;
+    color: rgb(185, 199, 230)
 }
